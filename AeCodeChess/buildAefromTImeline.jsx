@@ -5,7 +5,7 @@ var compName = "Chess_Comp";
 var compWidth = 1080;
 var compHeight = 1920;
 var compDuration = 60; // seconds
-var compFPS = 30;
+var compFPS = 60;
 
 var assetsFolder = "C:/Users/ilove/Downloads/Ae Chess Tool ( TEST GIT HUB )/Ae Chess Tool/assets/";
 var timelineJsonPath = "C:/Users/ilove/Downloads/Ae Chess Tool ( TEST GIT HUB )/Ae Chess Tool/timeline.json";
@@ -86,7 +86,7 @@ for (var r = 0; r < 8; r++) {
         var fill = group.content.addProperty("ADBE Vector Graphic - Fill");
         var dark = (r + c) % 2 === 1;
 
-        fill.property("Color").setValue(dark ? [0.2, 0.392, 0.392] : [0.902, 0.941, 0.941]);
+       fill.property("Color").setValue(dark ? [0.48, 0.46, 0.47] : [1, 1, 1]);
 
         // Position squares relative to top-left of gridGroup (starts at 0,0)
         var localX = squareSize * (c + 0.5);
@@ -488,3 +488,4 @@ delete pieceLayersBySquare[fromSq];
     timeCursor += moveDuration + gapBetweenMoves;
 
 }
+
